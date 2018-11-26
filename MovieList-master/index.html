@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>CineSpot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="js/material.min.css">
+    <link rel="stylesheet" type="text/css" href="js/material.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"/>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="js/material.min.css.map">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="js/material.js"></script>
+    <script src="js/material.min.js"></script>
+
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+
+    <!--<script src="js/material.min.js.map"></script>-->
+    <!--<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-deep_purple.min.css" />-->
+
+
+    <style>
+
+        .demo-card-wide.mdl-card {
+            width: 412px;
+            height: 450px;
+
+        }
+
+        .demo-card-wide > .mdl-card__title {
+            color: #fff;
+            height: 450px;
+        }
+
+        .demo-card-wide > .mdl-card__menu {
+            color: #fff;
+        }
+
+        #GOT {
+            background: url("images/GOT.jpg") center/cover;
+        }
+
+        #social {
+            background: url('./images/A-Rede-Social.jpg') center/cover;
+        }
+
+        .mdl-card__supporting-text {
+            position: relative;
+            left: 30%;
+            font-size: 1.3em;
+        }
+
+        .mdl-button:hover {
+            color: #aaaaaa;
+        }
+
+        #textInicio {
+            position: relative;
+            left: 5%;
+            text-align: center;
+        }
+
+        #btnFilme {
+            font-size: 18px;
+            color: #f6faff;
+            height: 70px;
+            width: 200px;
+            border: #aaaaaa;
+            border: solid 1px;
+            border-radius: 20px;
+        }
+
+        #btnFilme:hover {
+            color: #aaaaaa;
+        }
+
+        #btnFilme2 {
+            font-size: 18px;
+            color: #f6faff;
+            height: 70px;
+            width: 200px;
+            border: solid 1px;
+            border-radius: 20px;
+        }
+
+        #btnFilme2:hover {
+            color: #aaaaaa;
+        }
+
+        #divBtn {
+            position: relative;
+            left: 23.5%;
+        }
+
+        .mdl-mini-footer {
+            font-size: 15px;
+            height: 10px;
+            background-color: #363636;
+        }
+
+        .mdl-button--mini-fab {
+            position: relative;
+
+            margin-left: 46%;
+        }
+
+        .textoSinopse {
+            background-color: #fdf5e6;
+            position: relative;
+            margin-left: 1.8%;
+            margin-right: 1.8%;
+            margin-bottom: 1.9%;
+            font-size: 0.7em;
+            line-height: 1.5em;
+
+        }
+
+        p {
+            font-size: 0.7em;
+            line-height: 1.5em;
+            text-align: left;
+        }
+
+
+
+    </style>
+
+
+    <script>
+        function aparecerDiv(element, icone, numero) {
+            var nomeIcone = document.getElementById(icone).textContent;
+            if (nomeIcone === "expand_more") {
+                document.getElementById(icone).innerHTML = 'expand_less';
+                document.getElementsByClassName(element)[numero].style.display = 'block';
+            } else {
+                document.getElementsByClassName(element)[numero].style.display = 'none';
+                document.getElementById(icone).innerHTML = 'expand_more';
+
+            }
+
+        }
+
+
+        function fecharDocumento(element) {
+            document.getElementById(element).style.display = 'none';
+        }
+    </script>
+
+</head>
+<body>
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <a style="color: #efefef" href="index.html" class="mdl-layout-title">CineSpot</a>
+
+                <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="oscarmf.html">Filmes</a>
+                <a class="mdl-navigation__link" href="serief.html">Séries</a>
+            </nav>
+        </div>
+    </header>
+</div>
+<br>
+<br>
+
+<main class="mdl-layout__content">
+    <div class="page-content">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--1-col"></div>
+            <div class="">
+                <h1 class="mdl-color-text--orange" style="font-size: 3em">
+                    <span class="txt-rotate" data-period="2000" data-rotate='["CineSpot"]'></span>
+                </h1>
+                <div>
+                    <h2 style="text-align: center">
+                        Fique por dentro das séries e filmes mais homenageadas do mundo</h2>
+                </div>
+                <br>
+                <br>
+            </div>
+
+
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col">
+                    <!--Espaçamento entre a borda esquerda e o card-->
+                </div>
+                <div class="mdl-cell mdl-cell--5-col">
+                    <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                        <div id="social" class="mdl-card__title">
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            A Rede Social
+                        </div>
+                        <div onclick="document.getElementById('modalRedeSocial').style.display='block'"
+                             class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                            Detalhes
+                        </div>
+                    </div>
+
+                    <div id="modalRedeSocial" class="w3-modal w3-animate-opacity">
+                        <div class="w3-modal-content">
+                            <header class="w3-container w3-indigo">
+                                    <span onclick="fecharDocumento('modalRedeSocial')"
+                                          class="w3-button w3-large w3-display-topright">&times;</span>
+                                <h3 class="w3-middle">A Rede Social</h3>
+                            </header>
+                            <div class="w3-container">
+                                <br>
+                                <div>
+                                    <img align="left" src="images/A-Rede-Social.jpg" height="300" width="400"/>
+                                    <p style="margin-left: 50%">
+                                        Ano: 2010 <br>
+                                        País de origem: Estados Unidos <br>
+                                        Direção: David Fincher <br>
+                                        Elenco: Jesse Eisenberg, Andrew Garfield, Justin Timberlake <br>
+                                        Gênero: Drama <br>
+                                        Música: Trent Reznor, Atticus Ross <br>
+                                        Classificação: 14 anos <br>
+                                        Duração: 121 min <br> <br>
+
+                                        <span class="imdbRatingPlugin" data-user="ur95576492" data-title="tt1285016"
+                                              data-style="p3">
+                                        <a href="https://www.imdb.com/title/tt1285016/?ref_=plg_rt_1"><img
+                                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                                alt=" A Rede Social
+                                            (2010) on IMDb"/>
+                                        </a>
+                                    </span>
+
+                                    </p>
+                                </div>
+
+                                <br>
+                            </div>
+
+                            <footer class="w3-container  w3-sand">
+
+                                <script>(function (d, s, id) {
+                                    var js, stags = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) {
+                                        return;
+                                    }
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+                                    stags.parentNode.insertBefore(js, stags);
+                                })(document, "script", "imdb-rating-api");
+                                </script>
+
+                                <button type="button"
+                                        class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect"
+                                        onclick="aparecerDiv('textoSinopse', 'iSocial', 0)">
+                                    <i id="iSocial" class="material-icons">expand_more</i>
+                                </button>
+                            </footer>
+
+                            <div class="textoSinopse " style="display: none">
+                                <h4 style="color: #ff9800">Sinopse: </h4>
+
+                                Em uma noite de outono em 2003, Mark Zuckerberg, analista de sistemas graduado em
+                                Harvard, se senta em seu computador e começa a trabalhar em uma nova ideia. Apenas
+                                seis
+                                anos e 500 milhões de amigos mais tarde, Zuckerberg se torna o mais jovem bilionário
+                                da
+                                história com o sucesso da rede social Facebook. O sucesso, no entanto, o leva a
+                                complicações em sua vida social e profissional.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                        <div id="GOT" class="mdl-card__title">
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Game of Thrones
+                        </div>
+                        <div type="button" onclick="document.getElementById('modalGOT').style.display='block'"
+                             class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                            Detalhes
+                        </div>
+                    </div>
+
+                    <div id="modalGOT" class="w3-modal w3-animate-opacity">
+                        <div class="w3-modal-content">
+                            <header class="w3-container w3-indigo">
+                                    <span onclick="fecharDocumento('modalGOT')"
+                                          class="w3-button w3-large w3-display-topright">&times;</span>
+                                <h3 class="w3-middle">Game of Thrones</h3>
+                            </header>
+                            <div class="w3-container">
+                                <br>
+                                <div>
+                                    <img align="left" src="images/GOT.jpg" height="300" width="400"/>
+                                    <p style="margin-left: 50%">
+                                        Ano: 2011 <br>
+                                        País de origem: Estados Unidos <br>
+                                        Direção: David Benioff, D.B Weiss <br>
+                                        Elenco: Kit Harington, Emilia Clarke, Peter Dinklage <br>
+                                        Gênero: Drama, Fantasia <br>
+                                        Música: Ramin Djawadi <br>
+                                        Classificação: 16 anos <br>
+                                        Número de Temporadas: 8 <br> <br>
+
+                                        <span class="imdbRatingPlugin" data-user="ur95576492" data-title="tt0944947"
+                                              data-style="p3">
+                                           <a
+                                                   href="https://www.imdb.com/title/tt0944947/?ref_=plg_rt_1"><img
+                                                   src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                                   alt=" Game of Thrones (2011) on IMDb"/>
+                                           </a>
+                                       </span>
+                                    </p>
+
+                                </div>
+
+                                <br>
+                            </div>
+
+                            <footer class="w3-container  w3-sand">
+
+                                <script>(function (d, s, id) {
+                                    var js, stags = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) {
+                                        return;
+                                    }
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+                                    stags.parentNode.insertBefore(js, stags);
+                                })(document, "script", "imdb-rating-api");</script>
+
+                                <button type="button"
+                                        class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect"
+                                        onclick="aparecerDiv('textoSinopse', 'iGOT', 1)">
+                                    <i id="iGOT" class="material-icons">expand_more</i>
+                                </button>
+                            </footer>
+
+                            <div class="textoSinopse" style="display: none">
+                                <h4 style="color: #ff9800">Sinopse: </h4>
+                                Há muito tempo, em um tempo esquecido, uma força destruiu o equilíbrio das estações.
+                                Em uma terra onde os verões podem durar vários anos e o inverno toda uma vida, as
+                                reivindicações e as forças sobrenaturais correm as portas do Reino dos Sete Reinos.
+                                A irmandade da Patrulha da Noite busca proteger o reino de cada criatura que pode
+                                vir de lá da Muralha, mas já não tem os recursos necessários para garantir a
+                                segurança de todos. Depois de um verão de dez anos, um inverno rigoroso promete
+                                chegar com um futuro mais sombrio. Enquanto isso, conspirações e rivalidades correm
+                                no jogo político pela disputa do Trono de Ferro, o símbolo do poder absoluto.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div id="textInicio" class="page-content">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--1-col"></div>
+                        <div class="">
+                            <div>
+                                <h4>
+                                    CineSpot é um sistema gratuito com o intuito de exibir os maiores filmes
+                                    ganhadores de Oscáres por "Fotografia e "Trilha Sonora".<br>
+                                    E também, claro, as séries prestigiadas pelo Emmy "Efeitos Visuais" e "Trilha
+                                    Sonora Original para série". <br>Não perca nenhum detalhe sobre os sucessos
+                                    desde 2010!<br></h4>
+                            </div>
+                            <h2 style="color: #ff9800">Venha conhecer</h2>
+                        </div>
+                    </div>
+                        <div class="mdl-grid">
+
+                            <div id="divBtn" class="mdl-cell--6-col" style="margin-left: 0.8em">
+                                <!--Espaçamento entre a borda esquerda e o card-->
+                                <button onclick="window.location.href ='oscarmf.html'" id="btnFilme"
+                                        class="mdl-button mdl-js-button  mdl-button--colored mdl-button--raised mdl-js-ripple-effect">
+                                    Filmes
+                                </button>
+
+                                <button id="btnFilme2" onclick="window.location.href ='serief.html'" style="margin-left: 4em"
+                                        class="mdl-button mdl-js-button  mdl-button--colored mdl-button--raised mdl-js-ripple-effect">
+                                    Séries
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <footer class="mdl-mini-footer">
+                        <div class="mdl-mini-footer__left-section">
+                            <div class="mdl-logo" style="color: #688270">Engenharia de Software</div>
+                            <ul class="mdl-mini-footer__link-list">
+                                <li><a class="git-icon" href="https://www.github.com/RonanFelipe"></a></li>
+                                <li><a class="git-icon" href="https://www.github.com/gsantana99"></a></li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+</main>
+
+
+</body>
+</html>

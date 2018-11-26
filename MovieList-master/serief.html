@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CineSpot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="js/material.min.css">
+    <link rel="stylesheet" type="text/css" href="js/material.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"/>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="js/material.min.css.map">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="js/material.js"></script>
+    <script src="js/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+
+    <!--<script src="js/material.min.js.map"></script>-->
+    <!--<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-deep_purple.min.css" />-->
+
+
+    <style>
+
+        .demo-card-wide.mdl-card {
+            width: 365px;
+            height: 470px;
+
+        }
+
+        .demo-card-wide > .mdl-card__title {
+            color: #fff;
+            height: 450px;
+        }
+
+        .demo-card-wide > .mdl-card__menu {
+            color: #fff;
+        }
+
+        #csi {
+            background: url("images/csi.jpg") center/cover;
+        }
+
+        #boardE {
+            background: url("images/ci98v96z.bmp") center/cover;
+        }
+
+        #got1{
+            background: url("images/vm832iir.bmp") center/cover;
+        }
+
+        #got2{
+            background: url("images/o72ux1zo.bmp") center/cover;
+        }
+
+        #got3{
+            background: url("images/GOT.jpg") center/cover;
+        }
+
+        #got4{
+            background: url("images/g5snr74m.bmp") center/cover;
+        }
+
+        #got5{
+            background: url("images/5z273sat.bmp") center/cover;
+        }
+
+        #got6{
+            background: url("images/fl1ipnar.bmp") center/cover;
+        }
+
+        #got6{
+            background: url("images/fl1ipnar.bmp") center/cover;
+        }
+
+        #west{
+            background: url("images/np691c7n.bmp") center/cover;
+        }
+
+
+        .mdl-card__supporting-text {
+            position: relative;
+            left: 30%;
+            font-size: 1.3em;
+        }
+
+        .mdl-button:hover {
+            color: #aaaaaa;
+        }
+
+        .mdl-mini-footer {
+            font-size: 15px;
+            height: 10px;
+            background-color: #363636;
+        }
+
+        .mdl-button--mini-fab {
+            position: relative;
+
+            margin-left: 46%;
+        }
+
+        .textoSinopse {
+            background-color: #fdf5e6;
+            position: relative;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 4%;
+            font-size: 0.7em;
+            line-height: 1.5em;
+        }
+
+        p {
+            font-size: 0.7em;
+            line-height: 1.5em;
+            text-align: left;
+        }
+
+        input[type=radio] {
+            position: absolute;
+            visibility: hidden;
+            display: none;
+        }
+
+        label {
+            color: #9a929e;
+            display: inline-block;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 5px 20px;
+        }
+
+        input[type=radio]:checked + label {
+            color: #ccc8ce;
+            background: #675f6b;
+        }
+
+        label + input[type=radio] + label {
+            border-left: solid 3px #675f6b;
+        }
+
+        .radio-group {
+            border: solid 3px #675f6b;
+            display: inline-block;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #check {
+            position: absolute;
+            left: 60%;
+            top: 1.8%;
+        }
+
+    </style>
+
+
+    <script>
+
+        function mudarOscar(id) {
+            if (id === "option-one") {
+
+                window.location.href = 'serief.html';
+            } else {
+                window.location.href = 'oscarmts.html';
+            }
+        }
+
+
+        function aparecerDiv(element, icone, numero) {
+            var nomeIcone = document.getElementById(icone).textContent;
+            if (nomeIcone === "expand_more") {
+                document.getElementById(icone).innerHTML = 'expand_less';
+                document.getElementsByClassName(element)[numero].style.display = 'block';
+            } else {
+                document.getElementsByClassName(element)[numero].style.display = 'none';
+                document.getElementById(icone).innerHTML = 'expand_more';
+
+            }
+
+        }
+
+        function fecharDocumento(element) {
+            document.getElementById(element).style.display = 'none';
+        }
+    </script>
+
+</head>
+<body>
+
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <a style="color: #efefef" href="index.html" class="mdl-layout-title">CineSpot</a>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="oscarmf.html">Filmes</a>
+                <a class="mdl-navigation__link" href="serief.html">Séries</a>
+            </nav>
+        </div>
+    </header>
+</div>
+<br>
+<br>
+
+<main class="mdl-layout__content">
+    <div class="page-content">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--1-col"></div>
+            <h2 style="color: #ff9800">
+                Melhores Séries Efeitos Especiais</h2>
+            <br>
+
+            <div id="check">
+                <form>
+                    <div class="radio-group">
+                        <input onclick="mudarOscar('option-one')" type="radio" id="option-one" name="selector" checked>
+                        <label for="option-one">Emmy <br> Efeitos Especias</label>
+                        <input onclick="alert('Não funcional ainda! Desculpe-nos.')" type="radio" id="option-two" name="selector"><label
+                            for="option-two">Emmy  Trilha<br> Sonora Original</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <div class="mdl-grid mdl-cell--11-col">
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2010</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="csi" class="mdl-card__title">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    CSI: Crime Scene <br> Investigation
+                </div>
+                <div type="button" onclick="document.getElementById('modalCSI').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+
+            <div id="modalCSI" class="w3-modal w3-animate-opacity">
+                <div class="w3-modal-content">
+                    <header class="w3-container w3-indigo">
+                                    <span onclick="fecharDocumento('modalCSI')"
+                                          class="w3-button w3-large w3-display-topright">&times;</span>
+                        <h3 class="w3-middle"> CSI: Crime Scene Investigation</h3>
+                    </header>
+                    <div class="w3-container">
+                        <br>
+                        <div>
+                            <img align="left" src="images/csi.jpg" height="300" width="400"/>
+                            <p style="margin-left: 50%">
+                                Ano: 2000 <br>
+                                País de origem: Estados Unidos <br>
+                                Direção: Anthony E. Zuiker <br>
+                                Elenco: William Petersen,
+                                Marg Helgenberger,
+                                Jorja Fox,
+                                Gary Dourdan,
+                                George Eads <br>
+                                Gênero: Policial,
+                                Drama <br>
+                                Música: Pete Townshend <br>
+                                Classificação: 14 anos <br>
+                                Número de temporadas: 16<br> <br>
+
+
+                                <span class="imdbRatingPlugin" data-user="ur95576492" data-title="tt0247082"
+                                      data-style="p3"><a href="https://www.imdb.com/title/tt0247082/?ref_=plg_rt_1"><img
+                                        src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                        alt=" CSI: Investigação Criminal
+(2000) on IMDb"/>
+</a></span>
+                                <script>(function (d, s, id) {
+                                    var js, stags = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) {
+                                        return;
+                                    }
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+                                    stags.parentNode.insertBefore(js, stags);
+                                })(document, "script", "imdb-rating-api");</script>
+                            </p>
+
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <footer class="w3-container  w3-sand">
+
+                        <button type="button"
+                                class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect"
+                                onclick="aparecerDiv('textoSinopse', 'iCSI', 0)">
+                            <i id="iCSI" class="material-icons">expand_more</i>
+                        </button>
+                    </footer>
+
+                    <div class="textoSinopse" style="display: none">
+                        <h4 style="color: #ff9800">Sinopse: </h4>
+                        CSI revela as investigações de um grupo de cientistas forenses da polícia de Las Vegas. Esses
+                        peritos trabalham desvendando misteriosos crimes que são pouco comuns, a ponto de alguns
+                        parecerem impossíveis de se desvendar. O grupo é formato pelo Capitão James Brass (Paul
+                        Guilfoyle) que logo no início já é substituído por Gilbert Grissom (William Petersen), um
+                        entomologista que já integrava a equipe, pela biomédica Catherine Willows (Marg Helgenberger),
+                        pelo analista Nicholas Stokes (George Eads), pelos químicos Warrick Brown (Gary Dourdan) e
+                        Gregory Sanders (Eric Szmanda), pela física Sara Sidle (Jorja Fox) e pelo legista Albert Robbins
+                        (Robert David Hall). A série vai mostrando o cotidiano dos investigadores, que, enquanto
+                        resolvem esses casos surpreendentes, também precisam cuidar de suas vidas.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2011</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="boardE" class="mdl-card__title">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Boardwalk Empire
+                </div>
+                <div type="button" onclick="document.getElementById('modalBoardE').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+
+            <div id="modalBoardE" class="w3-modal w3-animate-opacity">
+                <div class="w3-modal-content">
+                    <header class="w3-container w3-indigo">
+                                    <span onclick="fecharDocumento('modalBoardE')"
+                                          class="w3-button w3-large w3-display-topright">&times;</span>
+                        <h3 class="w3-middle"> Boardwalk Empire</h3>
+                    </header>
+                    <div class="w3-container">
+                        <br>
+                        <div>
+                            <img align="left" src="images/ci98v96z.bmp" height="300" width="400"/>
+                            <p style="margin-left: 50%">
+                                Ano: 2010 <br>
+                                País de origem: Estados Unidos <br>
+                                Direção: Terence Winter <br>
+                                Elenco: Steve Buscemi, Kelly Macdonald, Michael Shannon <br>
+                                Gênero: Drama, Histórico, Policial <br>
+                                Música: Howard Shore <br>
+                                Classificação: 14 <br>
+                                Número de Temporadas: 5 <br> <br>
+                                <span class="imdbRatingPlugin" data-user="ur95576492" data-title="tt0979432"
+                                      data-style="p3"><a href="https://www.imdb.com/title/tt0979432/?ref_=plg_rt_1"><img
+                                        src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                        alt=" Boardwalk Empire: O Império do Contrabando
+(2010) on IMDb"/>
+</a></span>
+                                <script>(function (d, s, id) {
+                                    var js, stags = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) {
+                                        return;
+                                    }
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+                                    stags.parentNode.insertBefore(js, stags);
+                                })(document, "script", "imdb-rating-api");</script>
+                            </p>
+
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <footer class="w3-container  w3-sand">
+
+                        <button type="button"
+                                class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect"
+                                onclick="aparecerDiv('textoSinopse', 'iBoardE', 1)">
+                            <i id="iBoardE" class="material-icons">expand_more</i>
+                        </button>
+                    </footer>
+
+                    <div class="textoSinopse" style="display: none">
+                        <h4 style="color: #ff9800">Sinopse: </h4>
+                        Durante o período da Lei Seca Americana, na década de 1920, o tesoureiro de Atlantic City, Enoch
+                        'Nucky' Thompson (Steve Buscemi), mantém negócios com mafiosos e políticos da região. Ele logo
+                        entra no radar do Governo Federal, que investiga a corrupção e o dinheiro sujo que circula na
+                        cidade.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2012</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="got1" class="mdl-card__title">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Game of Thrones
+                </div>
+                <div onclick="document.getElementById('modalGOT').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+
+            <div id="modalGOT" class="w3-modal w3-animate-opacity">
+                <div class="w3-modal-content">
+                    <header class="w3-container w3-indigo">
+                                    <span onclick="fecharDocumento('modalGOT')"
+                                          class="w3-button w3-large w3-display-topright">&times;</span>
+                        <h3 class="w3-middle">Game of Thrones</h3>
+                    </header>
+                    <div class="w3-container">
+                        <br>
+                        <div>
+                            <img align="left" src="images/fl1ipnar.bmp" height="300" width="400"/>
+                            <p style="margin-left: 50%">
+                                Ano: 2011 <br>
+                                País de origem: Estados Unidos <br>
+                                Direção: David Benioff, D.B. Weiss<br>
+                                Elenco: Kit Harington, Emilia Clarke, Peter Dinklage <br>
+                                Gênero: Drama, Fantasia <br>
+                                Música: Ramin Djawadi <br>
+                                Classificação: 16 anos <br>
+                                Número de Temporadas: 8 <br> <br>
+
+                                <span class="imdbRatingPlugin" data-user="ur95576492" data-title="tt0944947"
+                                      data-style="p3">
+                                           <a
+                                                   href="https://www.imdb.com/title/tt0944947/?ref_=plg_rt_1"><img
+                                                   src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                                   alt=" Game of Thrones (2011) on IMDb"/>
+                                           </a>
+                                       </span>
+
+
+                                <script>(function (d, s, id) {
+                                    var js, stags = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) {
+                                        return;
+                                    }
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+                                    stags.parentNode.insertBefore(js, stags);
+                                })(document, "script", "imdb-rating-api");</script>
+
+                            </p>
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <footer class="w3-container  w3-sand">
+                        <button type="button"
+                                class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect"
+                                onclick="aparecerDiv('textoSinopse', 'iGOT', 2)">
+                            <i id="iGOT" class="material-icons">expand_more</i>
+                        </button>
+                    </footer>
+
+                    <div class="textoSinopse " style="display: none">
+                        <h4 style="color: #ff9800">Sinopse: </h4>
+                        Em uma terra onde os verões podem durar vários anos e o inverno toda uma vida, as
+                        reivindicações e as forças sobrenaturais correm as portas do Reino dos Sete Reinos.
+                        A irmandade da Patrulha da Noite busca proteger o reino de cada criatura que pode
+                        vir de lá da Muralha, mas já não tem os recursos necessários para garantir a
+                        segurança de todos. Depois de um verão de dez anos, um inverno rigoroso promete
+                        chegar com um futuro mais sombrio. Enquanto isso, conspirações e rivalidades correm
+                        no jogo político pela disputa do Trono de Ferro, o símbolo do poder absoluto.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2013</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="got2" class="mdl-card__title">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Game of Thrones
+                </div>
+                <div onclick="document.getElementById('modalGOT').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2014</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="got3" class="mdl-card__title ">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Game of Thrones
+                </div>
+                <div onclick="document.getElementById('modalGOT').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2015</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="got4" class="mdl-card__title ">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Game of Thrones
+                </div>
+                <div onclick="document.getElementById('modalGOT').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2016</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="got5" class="mdl-card__title">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Game of Thrones
+                </div>
+                <div onclick="document.getElementById('modalGOT').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+        </div>
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2017</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="west" class="mdl-card__title">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Westworld
+                </div>
+                <div onclick="document.getElementById('modalWest').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+
+            <div id="modalWest" class="w3-modal w3-animate-opacity">
+                <div class="w3-modal-content">
+                    <header class="w3-container w3-indigo">
+                                    <span onclick="fecharDocumento('modalWest')"
+                                          class="w3-button w3-large w3-display-topright">&times;</span>
+                        <h3 class="w3-middle">Westworld</h3>
+                    </header>
+                    <div class="w3-container">
+                        <br>
+                        <div>
+                            <img align="left" src="images/np691c7n.bmp" height="300" width="400"/>
+                            <p style="margin-left: 50%">
+                                Ano: 2016 <br>
+                                País de origem: Estados Unidos <br>
+                                Direção: Jonathan Nolan, Lisa Joy
+                                <br>
+                                Elenco: Evan Rachel Wood, Thandie Newton, Jeffrey Wright<br>
+                                Gênero: Ficção científica, Faroeste
+                                <br>
+                                Música: Ramin Djawadi <br>
+                                Classificação: 16 anos <br>
+                                Número de Temporadas: 2 <br> <br>
+
+                                <span class="imdbRatingPlugin" data-user="ur95576492" data-title="tt0475784"
+                                      data-style="p3"><a href="https://www.imdb.com/title/tt0475784/?ref_=plg_rt_1"><img
+                                        src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                        alt=" Westworld
+(2016) on IMDb"/>
+</a></span>
+                                <script>(function (d, s, id) {
+                                    var js, stags = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) {
+                                        return;
+                                    }
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+                                    stags.parentNode.insertBefore(js, stags);
+                                })(document, "script", "imdb-rating-api");</script>
+
+                            </p>
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <footer class="w3-container  w3-sand">
+                        <button type="button"
+                                class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect"
+                                onclick="aparecerDiv('textoSinopse', 'iWest', 3)">
+                            <i id="iWest" class="material-icons">expand_more</i>
+                        </button>
+                    </footer>
+
+                    <div class="textoSinopse " style="display: none">
+                        <h4 style="color: #ff9800">Sinopse: </h4>
+                        Westworld é um parque temático futurístico para adultos, dedicado à diversão dos ricos. Um
+                        espaço que reproduz o Velho Oeste, povoado por andróides – os anfitriões –, programados pelo
+                        diretor executivo do parque, o Dr. Robert Ford (Anthony Hopkins), para acreditarem que são
+                        humanos e vivem no mundo real. Lá, os clientes – ou novatos – podem fazer o que quiserem, sem
+                        obedecer a regras ou leis. No entanto, quando uma atualização no sistema das máquinas dá errado,
+                        os seus comportamentos começam a sugerir uma nova ameaça, à medida que a consciência artificial
+                        dá origem à "evolução do pecado". Entre os residentes do parque, está Dolores Abernathy (Evan
+                        Rachel Wood), programada para ser a típica garota da fazenda, que está prestes a descobrir que
+                        toda a sua existência não passa de bem arquitetada mentira.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <h5>Vencedor 2018</h5>
+            <div class="demo-card-wide mdl-card mdl-shadow--16dp">
+                <div id="got6" class="mdl-card__title">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Game of Thrones
+                </div>
+                <div onclick="document.getElementById('modalGOT').style.display='block'"
+                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                    Detalhes
+                </div>
+            </div>
+        </div>
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+    </div>
+
+    <!-------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo" style="color: #688270">Engenharia de Software</div>
+            <ul class="mdl-mini-footer__link-list">
+                <li><a class="git-icon" href="https://www.github.com/RonanFelipe"></a></li>
+                <li><a class="git-icon" href="https://www.github.com/gsantana99"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</main>
+</body>
+</html>
